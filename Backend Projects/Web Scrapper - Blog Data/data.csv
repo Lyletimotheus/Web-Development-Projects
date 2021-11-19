@@ -1,0 +1,11 @@
+Item, LinkHome,/ 
+About,/views/about-us/about-us.php 
+Services,/views/services/services.php 
+Custom website,/views/services/services.php#web-development 
+WordPress website,/views/services/services.php#wordpress-development 
+Seo,/views/services/services.php#seo 
+Website design,/views/services/services.php#web-design 
+Mobile app design,/views/services/services.php#mobile-app-design 
+Digital marketing,/views/services/services.php#digital-marketing 
+Work,/views/our-work/our-work-submenu.php 
+Pricing,/views/pricing/pricing.php 
