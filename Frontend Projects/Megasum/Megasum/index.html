@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEGASUM</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="w-full text-gray-700 bg-white bg-gray-500 bg-opacity-90 relative z-40">
+      <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div class="p-4 flex flex-row items-center justify-between">
+          <a href="">
+            <svg id="logo-16" class="w-20" viewBox="0 0 109 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M64.9315 11.4284C62.1883 8.6852 58.9316 6.5091 55.3475 5.0245C51.7633 3.5399 47.9219 2.7758 44.0424 2.7758C40.1629 2.7758 36.3215 3.5399 32.7373 5.0245C29.1532 6.5091 25.8965 8.6852 23.1533 11.4284L44.0424 32.3174L64.9315 11.4284Z"
+                class="ccompli1"
+                fill="#FFD200"
+              ></path>
+              <path
+                d="M44.0686 32.3475C46.8118 35.0907 50.0684 37.2667 53.6526 38.7513C57.2367 40.2359 61.0782 41 64.9577 41C68.837 41 72.679 40.2359 76.263 38.7513C79.847 37.2667 83.104 35.0907 85.847 32.3475L64.9577 11.4584L44.0686 32.3475Z"
+                class="ccompli2"
+                fill="#06E07F"
+              ></path>
+              <path
+                d="M44.017 32.3429C41.2738 35.0861 38.0171 37.2621 34.433 38.7467C30.8488 40.2313 27.0074 40.9954 23.1279 40.9954C19.2484 40.9954 15.407 40.2313 11.8228 38.7467C8.2387 37.2621 4.982 35.0861 2.2388 32.3429L23.1279 11.4538L44.017 32.3429Z"
+                class="ccustom"
+                fill="#E3073C"
+              ></path>
+              <path
+                d="M64.9831 11.433C67.726 8.6898 70.983 6.5138 74.567 5.0292C78.151 3.5446 81.993 2.7805 85.872 2.7805C89.752 2.7805 93.593 3.5446 97.177 5.0292C100.761 6.5138 104.018 8.6898 106.761 11.433L85.872 32.3221L64.9831 11.433Z"
+                class="ccustom"
+                fill="#1F84EF"
+              ></path>
+            </svg>
+          </a>
+
+          <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-between md:flex-row">
+          <div></div>
+          <div class="flex-col flex md:justify-between md:flex-row">
+            <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-100 md:mt-0 hover:text-gray-300" href="#">Women</a>
+            <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-100 md:mt-0 hover:text-gray-300" href="#">Men</a>
+            <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-100 md:mt-0 hover:text-gray-300" href="#">Company</a>
+            <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-100 md:mt-0 hover:text-gray-300" href="#">Stores</a>
+          </div>
+
+          <div class="flex-col flex md:justify-between md:flex-row">
+            <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-100 md:mt-0 hover:text-gray-300" href="#">Search</a>
+            <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-100 md:mt-0 hover:text-gray-300" href="#">Help</a>
+
+            <div class="inline-flex items-center ml-4 mt-2">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </button>
+              <span class="ml-2 text-gray-100">0</span>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- <header class="text-gray-100 bg-gray-500 bg-opacity-90 absolute top-0 left-0 w-full z-10">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center">
+      
+
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a href="#" class="mr-10 hover:text-white">Women</a>
+          <a href="#" class="mr-10 hover:text-white">Men</a>
+          <a href="#" class="mr-10 hover:text-white">Company</a>
+          <a href="#" class="hover:text-white">Stores</a>
+        </nav>
+
+        <a href="#" class="mr-10 hover:text-white">Search</a>
+        <a href="#" class="mr-10 hover:text-white">Help</a>
+
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+        </button>
+        <span class="ml-2">0</span>
+      </div>
+    </header> -->
+
+    <main>
+      <section id="hero" class="relative">
+        <div class="container mx-auto">
+          <div class="p-5 min-h-screen grid place-items-center relative z-10">
+            <div class="space-y-5">
+              <h1 class="text-center text-white text-3xl md:text-6xl font-bold">New arrivals are here</h1>
+
+              <p class="text-center text-white text-xl">
+                The new arrivals have, well, newly arrived. Check out the latest options from our <br class="hidden lg:block" />
+                summer small-batch release while they're still in stock
+              </p>
+
+              <div class="text-center">
+                <button class="px-4 py-3 bg-white text-sm font-semibold text-gray-800 rounded-lg">Shop New Arrivals</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto p-5 pt-24">
+          <div class="flex justify-between items-center mb-8">
+            <h2 class="text-gray-800 font-bold text-2xl">Shop by Category</h2>
+
+            <a href="#" class="hidden md:inline-flex items-center text-purple-500"
+              >Browser all categories
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:container lg:mx-auto py-5 px-2">
+          <div class="lg:flex lg:justify-between overflow-x-scroll lg:overflow-x-hidden overflow-y-hidden whitespace-nowrap space-x-5">
+            <div class="category-card inline-flex flex-col justify-around p-3 pt-12 pb-8 rounded-lg shadow-lg">
+              <img src="3D-printer.png" alt="" width="200" class="mx-auto mb-10 px-4" />
+              <h3 class="text-white font-bold text-xl tracking-wide text-center">New Arrivals</h3>
+            </div>
+
+            <div class="category-card inline-flex flex-col justify-around p-3 pt-12 pb-8 rounded-lg shadow-lg">
+              <img src="nib-pen.png" alt="" width="200" class="mx-auto mb-10 px-4" />
+              <h3 class="text-white font-bold text-xl text-center">Productivity</h3>
+            </div>
+
+            <div class="category-card inline-flex flex-col justify-around p-3 pt-12 pb-8 rounded-lg shadow-lg">
+              <img src="oil.png" alt="" width="200" class="mx-auto mb-10 px-4" />
+              <h3 class="text-white font-bold text-xl text-center">Kitchen</h3>
+            </div>
+
+            <div class="category-card inline-flex flex-col justify-around p-3 pt-12 pb-8 rounded-lg shadow-lg">
+              <img src="watch.png" alt="" width="200" class="mx-auto mb-10 px-4" />
+              <h3 class="text-white font-bold text-xl text-center">Accessories</h3>
+            </div>
+
+            <div class="category-card inline-flex flex-col justify-around p-3 pt-12 pb-8 rounded-lg shadow-lg">
+              <img src="xbox-console.png" alt="" width="200" class="mx-auto mb-10 px-4" />
+              <h3 class="text-white font-bold text-xl text-center">Sale</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mx-auto p-5">
+          <a href="#" class="inline-flex md:hidden items-center text-purple-500"
+            >Browser all categories
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section id="workspace">
+        <div class="container mx-auto p-5 py-24">
+          <div class="min-vh-80 grid place-items-center relative rounded-lg overflow-hidden">
+            <div class="space-y-5 p-5 relative z-10">
+              <h2 class="text-center text-white text-3xl md:text-6xl font-bold">Level up your desk</h2>
+
+              <p class="text-center text-white text-xl">
+                Make your desk beautiful and organized. Post a picture to social media and <br class="hidden lg:block" />
+                watch it get more likes than life-changing announcements. Reflect on the shallow <br class="hidden lg:block" />
+                of existence. At least you have a really nice desk setup.
+              </p>
+
+              <div class="text-center">
+                <button class="px-4 py-3 bg-white text-sm font-semibold text-gray-800 rounded-lg">Shop Workspace</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto p-5 py-24">
+          <div class="mb-8">
+            <h2 class="text-gray-800 font-bold text-2xl mb-4">Shop by Collection</h2>
+            <p class="text-gray-600">Each season, we collaborate with world-class designers to create a collection inspired by a natural world.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="space-y-3">
+              <div class="h-96 overflow-hidden rounded-lg">
+                <img src="handcrafted-collection.jpg" alt="" />
+              </div>
+
+              <h3 class="text-gray-800 font-bold text-lg">Handcrafted Collection</h3>
+              <p class="text-gray-600">Keep your phone, keys, and wallet together, so you can lose everything at once.</p>
+            </div>
+
+            <div class="space-y-3">
+              <div class="h-96 overflow-hidden rounded-lg">
+                <img src="organised-desk-collection.jpg" alt="" />
+              </div>
+
+              <h3 class="text-gray-800 font-bold text-lg">Organised Desk Collection</h3>
+              <p class="text-gray-600">The rest of the house will still be a mess, but your desk will look great.</p>
+            </div>
+
+            <div class="space-y-3">
+              <div class="h-96 overflow-hidden rounded-lg">
+                <img src="focus-collection.jpg" alt="" />
+              </div>
+
+              <h3 class="text-gray-800 font-bold text-lg">Focus Collection</h3>
+              <p class="text-gray-600">Be more productive than enterprise project managers with a single pice of paper.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="focus">
+        <div class="container mx-auto p-5 py-24">
+          <div class="min-vh-80 grid place-items-center relative rounded-lg overflow-hidden">
+            <div class="space-y-5 p-5 relative z-10">
+              <h2 class="text-center text-white text-3xl md:text-6xl font-bold">Simple Productivity</h2>
+
+              <p class="text-center text-white text-xl">
+                Endless tasks, limited hours, a single piece of paper. Not really a haiku, but we're<br class="hidden lg:block" />
+                doing our best here. No kanban boards, burndown charts, or tangled flowcharts<br class="hidden lg:block" />
+                with our Focus system. Just the undeniable urge to fill empty circles.
+              </p>
+
+              <div class="text-center">
+                <button class="px-4 py-3 bg-white text-sm font-semibold text-gray-800 rounded-lg">Shop Focus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-gray-400 bg-gray-900 body-font">
+      <div class="container px-5 py-24 pb-12 mx-auto">
+        <div class="flex flex-wrap order-first">
+          <div class="lg:w-1/6 w-1/2 px-4 py-4">
+            <h2 class="title-font font-semibold text-white text-sm mb-5">Shop</h2>
+            <nav class="list-none space-y-5">
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Bags</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Tees</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Objects</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Home Goods</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Accessories</a>
+              </li>
+            </nav>
+          </div>
+
+          <div class="lg:w-1/6 w-1/2 px-4 py-4">
+            <h2 class="title-font font-semibold text-white text-sm mb-5">Company</h2>
+            <nav class="list-none space-y-5">
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Who we are</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Sustainability</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Press</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Careers</a>
+                <span style="padding-top: 0.2em; padding-bottom: 0.2rem" class="text-xs px-3 ml-2 bg-indigo-800 text-white rounded-full">We're hiring!</span>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Terms & Conditions</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Privacy</a>
+              </li>
+            </nav>
+          </div>
+
+          <div class="lg:w-1/6 w-1/2 px-4 py-4">
+            <h2 class="title-font font-semibold text-white text-sm mb-5">Account</h2>
+            <nav class="list-none space-y-5">
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Manage Account</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Returns & Exchanges</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Redeem a Gift Card</a>
+              </li>
+            </nav>
+          </div>
+
+          <div class="lg:w-1/6 w-1/2 px-4 py-4">
+            <h2 class="title-font font-semibold text-white text-sm mb-5">Connect</h2>
+            <nav class="list-none space-y-5">
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Contact Us</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Twitter</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Instagram</a>
+              </li>
+              <li>
+                <a class="font-semibold text-sm text-gray-400 hover:text-white">Pinterest</a>
+              </li>
+            </nav>
+          </div>
+
+          <div class="lg:w-2/6 w-full px-4 py-4">
+            <h2 class="title-font font-semibold text-white text-sm mb-5">Sign up for our newsletter</h2>
+
+            <p for="footer-field" class="font-semibold text-sm text-gray-400 mb-3">The latest deals and savings, sent to your inbox weekly.</p>
+            <div class="flex justify-center items-end md:justify-start">
+              <div class="relative w-full sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                <input
+                  type="text"
+                  id="footer-field"
+                  name="footer-field"
+                  class="
+                    w-full
+                    bg-white
+                    rounded
+                    border border-gray-700
+                    focus:bg-transparent focus:ring-2 focus:ring-indigo-900 focus:border-indigo-500
+                    text-base
+                    outline-none
+                    text-gray-100
+                    py-1
+                    px-3
+                    leading-8
+                    transition-colors
+                    duration-200
+                    ease-in-out
+                  "
+                />
+              </div>
+              <button class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Sign up</button>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-10 mt-24 opacity-10" />
+
+        <p class="text-sm text-gray-400">Copyright &copy; 2021 Clothing company Inc.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  </body>
+</html>
