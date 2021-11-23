@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@gmail.com",
+      "age": 34,
+      "companyId": "1"
+    },
+    {
+      "id": "2",
+      "firstName": "Karen",
+      "lastName": "Smith",
+      "email": "karen@gmail.com",
+      "age": 31,
+      "companyId": "2"
+    },
+    {
+      "id": "3",
+      "firstName": "Abel",
+      "lastName": "Jacklin",
+      "email": "abel@gmail.com",
+      "age": 46,
+      "companyId": "3"
+    },
+    {
+      "firstName": "Lyle",
+      "lastName": "Timotheus",
+      "age": 34,
+      "email": "test@gmail.com",
+      "companyId": "3",
+      "id": "1Kw-dMU"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "Apple Inc. designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services. The Company's products include iPhone, Mac, iPad, and Wearables, Home and Accessories. iPhone is the Company's line of smartphones based on its iOS operating system."
+    },
+    {
+      "id": "2",
+      "name": "Microsoft",
+      "description": "Microsoft was founded in 1975. Our mission is to enable people and businesses throughout the world to realize their full potential by creating technology that transforms the way people work, play, and communicate. ... We do business worldwide and have offices in more than 100 countries."
+    },
+    {
+      "id": "3",
+      "name": "Google",
+      "description": "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. ... In 2015, Google was reorganized as a wholly-owned subsidiary of Alphabet Inc.."
+    }
+  ]
+}
