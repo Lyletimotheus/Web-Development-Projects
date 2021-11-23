@@ -1,9 +1,7 @@
 
 # Projects
 <p>Below is a list of some of my personal projects</p> 
-
 <br/>
-
 ## Frontend Projects
 - [Ecommerce Landing Page UI](https://lyletimotheus.github.io/Web-Development-Projects/Frontend%20Projects/Megasum/Megasum/index.html)
 - [Book Lister UI](https://lyletimotheus.github.io/Web-Development-Projects/Frontend%20Projects/Booklist%20App/index.html)
