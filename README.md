@@ -5,5 +5,5 @@
 3. [Claire's Landing Page UI](https://lyletimotheus.github.io/Web-Development-Projects/Frontend%20Projects/Claire's%20Landing%20Page/index.html)
 4. [Netlify App UI Concept](https://lyletimotheus.github.io/Lyletimotheus/Web-Development-Projects/Frontend%20Projects/Netlify%20App%20Deployment/index.html)
 5. 
-https://github.com/Lyletimotheus/Web-Development-Projects/Frontend%20Projects/Claire's%20Landing%20Page/index.html
+https://lyletimotheus.github.io/Web-Development-Projects/Frontend%20Projects/Netlify%20App%20Deployment/index.html
 https://lyletimotheus.github.io/Web-Development-Projects/Frontend%20Projects/Claire's%20Landing%20Page/index.html
