@@ -1,0 +1,27 @@
+// INCLUDE FONTAWESOME FONTS PATH
+$fa-font-path: "../webfonts";
+
+// INCLUDE CUSTOM THEME
+@import './themes/theme';
+
+// INCLUDE THE BASE 
+@import './base/typography';
+
+// INCLUDE COMPONENTS
+@import './components/buttons';
+
+// INCLUDE LAYOUTS
+@import './layout/header';
+
+// INCLUDE THE PAGES
+@import './pages/index';
+
+
+
+
+
+// ************************************** ADD CUSTOM CODE ABOVE THIS LINE 1********************************
+// INCLUDE BOOTSRAP 5 
+@import './vendors/bootstrap';
+// ************************************** ADD CUSTOM CODE ABOVE THIS LINE 2********************************
+

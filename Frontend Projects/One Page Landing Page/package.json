@@ -1,0 +1,15 @@
+{
+  "name": "one-page-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "sass --watch scss:assets/css"
+  },
+  "author": "Lyle Timotheus",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "bootstrap": "^5.1.3"
+  }
+}
